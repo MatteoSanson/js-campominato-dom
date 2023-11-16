@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campo Minato</title>
+    <title>Griglia Campo Minato</title>
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,12 @@
                 <h1>Campo Minato</h1>
             </div>
         </div>
-        <div>
+        <div class="right">
+            <select id="level">
+                <option value="livello1">Livello 1</option>
+                <option value="livello2">Livello 2</option>
+                <option value="livello3">Livello 3</option>
+            </select>
             <button class="play">Play</button>
         </div>
     </header>
@@ -32,7 +37,7 @@
     <main>
         <div class="start-message">
             <h2>
-                Premi il tasto Play in alto a destra per giocare
+                Seleziona il livello e premi Play per giocare
             </h2>
         </div>
         <div class="griglia">

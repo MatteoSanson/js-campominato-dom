@@ -23,7 +23,7 @@ header {
     padding: .9375rem;
 }
 
-.left {
+.left, .right {
     display: flex;
     align-items: center;
     gap: .9375rem;
@@ -67,15 +67,27 @@ main {
 }
 
 .cell {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cell.clicked {
+.cell-1 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+.cell-2 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+.cell-3 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+
+.clicked {
     background-color: rgb(66, 66, 237);
 }
 /* /MAIN  */
