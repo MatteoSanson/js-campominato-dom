@@ -1,11 +1,11 @@
 # Campo Minato
 
-Continuazione dell'esercizio js-campominato-grid:
+Continuazione dell'esercizio js-campominato-grid
 <br>
 
 ## Consegna
 
-Copiamo la griglia fatta precedentemente nella nuova repo e aggiungiamo la logica del gioco.
+Copio la griglia fatta precedentemente nella nuova repo e aggiungo la logica del gioco.
 <br>
 
 ### Il gioco
