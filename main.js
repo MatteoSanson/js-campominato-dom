@@ -8,17 +8,38 @@ function elementoCella(tag, classNames, content) {
     return element;
 }
 
-function aggiungiEventoClick(element, clickedCells) {
+function aggiungiEventoClick(element, clickedCells, bombCells) {
     element.addEventListener('click', function () {
         if (!element.classList.contains('clicked')) {
-            element.classList.add('clicked');
             const cellNumber = element.textContent;
-            console.log('Cella cliccata:', cellNumber);
-            clickedCells.push(cellNumber);
+
+            if (bombCells.includes(cellNumber)) {
+                element.classList.add('cell-bomb');
+                console.log('Hai colpito una bomba! Game Over');
+               
+            } else {
+                element.classList.add('cell-empty');
+                console.log('Cella cliccata:', cellNumber);
+            }
         }
     });
 }
 
+// Funzione bombe
+function generateBombCells(targetBombCount, totalCellCount) {
+    const bombCells = [];
+    while (bombCells.length < targetBombCount) {
+        const bombCell = Math.floor(Math.random() * totalCellCount) + 1;
+        if (!bombCells.includes(bombCell.toString())) {
+            bombCells.push(bombCell.toString());
+        }
+    }
+    return bombCells;
+}
+
+
+
+// 
 let grigliaGenerata = false;
 let clickedCells = [];
 
@@ -58,14 +79,17 @@ playButton.addEventListener('click', function () {
             break;
     }
 
+    const bombCells = generateBombCells(16, targetCellCount);
+
     if (!grigliaGenerata) {
         let i = 1;
         while (document.querySelectorAll(`.${cellClass}`).length < targetCellCount) {
             const mioElemento = elementoCella('div', ['cell', cellClass], i);
-            aggiungiEventoClick(mioElemento, clickedCells);
+            aggiungiEventoClick(mioElemento, clickedCells, bombCells);
             griglia.append(mioElemento);
             i++;
         }
         grigliaGenerata = true;
     }
 });
+

@@ -88,8 +88,13 @@ main {
 }
 
 
-.clicked {
-    background-color: rgb(66, 66, 237);
+.cell-bomb {
+    background-color: red;
+    color: white;
+}
+
+.cell-empty {
+    background-color: lightblue;
 }
 /* /MAIN  */
 
