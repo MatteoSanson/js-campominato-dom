@@ -56,6 +56,7 @@ main {
     text-align: center;
     font-size: 1.5rem;
     z-index: 1;
+    animation: fadeIn 4s ease;
 }
 
 .griglia {
@@ -98,3 +99,13 @@ footer {
     padding: .9375rem;
 }
 /* /FOOTER  */
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
